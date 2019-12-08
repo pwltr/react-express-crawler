@@ -1,25 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import './stylesheets/normalize.css';
+
 body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  font-family: 'Open Sans', Verdana, 'DejaVu Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
 
 :root {
-  --dark-blue: #575b7e;
-  --dark-blue-40: rgba(87, 91, 126, 0.4);
-  --very-dark-blue: #201c3d;
-  --light-grayish-blue: #edeef3;
-  --dark-moderate-blue-10: rgba(67, 91, 126, 0.1);
-  --dark-moderate-blue-30: rgba(67, 91, 126, 0.3);
-  --desaturated-blue: #8594be;
-  --cyan: #55b6ab;
-  --gray: #a2a2a2;
-  --white: #ffffff;
-  --black: #000000;
-  --black-10: rgba(0, 0, 0, 0.1);
-  --black-20: rgba(0, 0, 0, 0.2);
-  --black-60: rgba(0, 0, 0, 0.4);
+  --clr-dark-blue: #575b7e;
+  --clr-dark-blue-40: rgba(145, 151, 211, 0.4);
+  --clr-very-dark-blue: #201c3d;
+  --clr-light-grayish-blue: #edeef3;
+  --clr-dark-moderate-blue-10: rgba(67, 91, 126, 0.1);
+  --clr-dark-moderate-blue-30: rgba(67, 91, 126, 0.3);
+  --clr-desaturated-blue: #8594be;
+  --clr-cyan: #55b6ab;
+  --clr-gray: #a2a2a2;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-black-10: rgba(0, 0, 0, 0.1);
+  --clr-black-20: rgba(0, 0, 0, 0.2);
+  --clr-black-60: rgba(0, 0, 0, 0.4);
+
+  --clr-primary: #ff7500;
+  --clr-primary-hover: #ff851d;
+  --clr-secondary: #ff7500;
+  --clr-text: #343434;
 }
