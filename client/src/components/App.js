@@ -75,7 +75,7 @@ const App = () => {
               </tr>
 
               <tr>
-                <td>URL:</td>
+                <td>URL</td>
                 <td>
                   <a href={result.url}>{result.url}</a>
                 </td>
@@ -100,42 +100,69 @@ const App = () => {
 
               <tr>
                 <td>Largest Image</td>
-                <td>{result.largestImageURL ? <img src={result.largestImageURL} /> : 'Kein Bild'}</td>
+                <td>{result.largestImageURL ? <img src={result.largestImageURL} /> : 'No image found'}</td>
               </tr>
 
               <tr>
-                <td>Internal Links: {result.linksInternal.length}</td>
+                <td>Internal Links</td>
                 <td>
-                  <ul>
-                    {result.linksInternal.map((link, index) => {
-                      return (
-                        <li key={index}>
-                          <a href={link}>{link}</a>
-                        </li>
-                      )
-                    })}
-                  </ul>
+                  {result.linksInternal.length > 0 ? (
+                    <>
+                      {result.linksInternal.length} Link(s):
+                      <ul>
+                        {result.linksInternal.map((link, index) => {
+                          return (
+                            <li key={index}>
+                              <a href={link}>{link}</a>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </>
+                  ) : (
+                    'No links found'
+                  )}
                 </td>
               </tr>
 
               <tr>
-                <td>External Links: {result.linksExternal.length}</td>
+                <td>External Links</td>
                 <td>
-                  <ul>
-                    {result.linksExternal.map((link, index) => {
-                      return (
-                        <li key={index}>
-                          <a href={link}>{link}</a>
-                        </li>
-                      )
-                    })}
-                  </ul>
+                  {result.linksExternal.length > 0 ? (
+                    <>
+                      {result.linksExternal.length} Link(s):
+                      <ul>
+                        {result.linksExternal.map((link, index) => {
+                          return <li key={index}>{link}</li>
+                        })}
+                      </ul>
+                    </>
+                  ) : (
+                    'No links found'
+                  )}
                 </td>
               </tr>
 
               <tr>
                 <td>Inaccessible Links</td>
-                <td>{result.linksInaccessible}</td>
+                <td>
+                  {result.linksInaccessible.length > 0 ? (
+                    <>
+                      {result.linksInaccessible.length} Link(s):
+                      <ul>
+                        {result.linksInaccessible.map((link, index) => {
+                          return (
+                            <li key={index}>
+                              <a href={link}>{link}</a>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </>
+                  ) : (
+                    'No links found'
+                  )}
+                </td>
               </tr>
 
               <tr>

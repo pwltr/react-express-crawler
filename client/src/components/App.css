@@ -61,12 +61,12 @@
 }
 
 .result__table {
-  background: var(--clr-light-grayish-blue);
   line-height: 1.2;
   width: 100%;
 }
 
 .result__table td {
+  background: var(--clr-light-grayish-blue);
   border: 1px solid var(--clr-black-40);
   padding: 0.5rem;
   vertical-align: top;

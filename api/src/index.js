@@ -82,7 +82,7 @@ function analyzeWebsite(uri) {
           const linksExternal = linksExternalElements.toArray().map(element => element.attribs.href)
 
           const linksElements = $('a')
-          const linksInaccessible = linksElements.toArray().map(element => element.attribs.href === undefined)
+          const linksInaccessible = linksElements.toArray().filter(element => element.attribs.href === undefined)
 
           data = {
             success: true,
