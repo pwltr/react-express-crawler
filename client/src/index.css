@@ -19,13 +19,19 @@ body {
   --clr-dark-moderate-blue-10: rgba(67, 91, 126, 0.1);
   --clr-dark-moderate-blue-30: rgba(67, 91, 126, 0.3);
   --clr-desaturated-blue: #8594be;
-  --clr-cyan: #55b6ab;
+
+  --clr-success: green;
+  --clr-warning: orange;
+  --clr-alert: red;
+
   --clr-gray: #a2a2a2;
   --clr-white: #ffffff;
   --clr-black: #000000;
+  --clr-black-05: rgba(0, 0, 0, 0.05);
   --clr-black-10: rgba(0, 0, 0, 0.1);
   --clr-black-20: rgba(0, 0, 0, 0.2);
-  --clr-black-60: rgba(0, 0, 0, 0.4);
+  --clr-black-30: rgba(0, 0, 0, 0.3);
+  --clr-black-40: rgba(0, 0, 0, 0.4);
 
   --clr-primary: #ff7500;
   --clr-primary-hover: #ff851d;
