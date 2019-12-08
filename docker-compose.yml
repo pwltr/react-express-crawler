@@ -1,0 +1,26 @@
+version: '3'
+services:
+  api:
+    restart: unless-stopped
+    image: api:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./api:/user/src/app
+    command: npm run watch
+    tty: true
+    stdin_open: true
+
+  client:
+    restart: unless-stopped
+    image: client:latest
+    ports:
+      - 8080:8080
+      - 43045:43045
+    volumes:
+      - ./client:/usr/src/app
+    links:
+      - api
+    command: npm start
+    tty: true
+    stdin_open: true
