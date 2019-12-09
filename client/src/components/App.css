@@ -1,11 +1,10 @@
 .container {
   color: var(--clr-text);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 10% 4rem 4rem;
 }
 
 .title {
