@@ -3,14 +3,17 @@
 A project consisting of a React frontend and a Node/Express back-end.
 
 ## Running with Docker
-* Make sure `docker` and `docker-compose` is installed on your system
-* Build the images with `docker build -t client ./client` and `docker build -t api ./api`
-* Run `docker-compose up`
+
+- Make sure `docker` and `docker-compose` is installed on your system
+- Build the images with `docker build -t client ./client` and `docker build -t api ./api`
+- Run `docker-compose up`
 
 Frontend is running on `http://localhost:8080`
+
 Backend is listening on `http://localhost:3000`
 
 ## Running for development
+
 For a more rapid development experience it often makes sense to run the project directly on your system.
 
 ### Starting the Frontend
