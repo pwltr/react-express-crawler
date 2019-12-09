@@ -180,8 +180,8 @@ const App = () => {
       )}
 
       {error && !loading && (
-        <div className="result error">
-          <table className="result__table">
+        <div className="error">
+          <table className="error__table">
             <tbody>
               <tr>
                 <td>Status</td>

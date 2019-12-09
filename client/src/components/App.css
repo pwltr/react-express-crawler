@@ -61,12 +61,15 @@
 
 .result__table {
   line-height: 1.2;
+  min-width: 50rem;
   width: 100%;
 }
 
 .result__table td {
   background: var(--clr-light-grayish-blue);
   border: 1px solid var(--clr-black-40);
+  max-width: 55rem;
+  overflow: auto;
   padding: 0.5rem;
   vertical-align: top;
 }
@@ -96,6 +99,25 @@
   max-height: 30rem;
   max-width: 100%;
   overflow: auto;
+}
+
+.error {
+  max-width: 80rem;
+}
+
+.error__table {
+  line-height: 1.2;
+  min-width: 50rem;
+  width: 100%;
+}
+
+.error__table td {
+  background: var(--clr-light-grayish-blue);
+  border: 1px solid var(--clr-black-40);
+  max-width: 55rem;
+  overflow: auto;
+  padding: 0.5rem;
+  vertical-align: top;
 }
 
 .indicator {
