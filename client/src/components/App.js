@@ -7,7 +7,6 @@ const UrlRegex = new RegExp(
 )
 
 const App = () => {
-  // const [url, setURL] = useState('https://www.google.at/')
   const [url, setURL] = useState('')
   const [urlIsValid, setUrlIsValid] = useState(true)
   const [loading, setLoading] = useState(false)
@@ -25,15 +24,21 @@ const App = () => {
     setResult(null)
     setError(null)
 
-    axios.get(`http://localhost:3000?url=${url}`).then(response => {
-      if (response.data.success) {
-        setResult(response.data)
-      } else {
-        setError(response.data)
-      }
+    axios
+      .get(`http://localhost:3000?url=${url}`)
+      .then(response => {
+        if (response.data.statusCode === 200) {
+          setResult(response.data)
+        } else {
+          setError(response.data)
+        }
 
-      setLoading(false)
-    })
+        setLoading(false)
+      })
+      .catch(error => {
+        setError({ statusCode: 500, error: { message: 'No response from server. Try again later. ' } })
+        setLoading(false)
+      })
   }
 
   return (
@@ -133,7 +138,11 @@ const App = () => {
                       {result.linksExternal.length} Link(s):
                       <ul>
                         {result.linksExternal.map((link, index) => {
-                          return <li key={index}>{link}</li>
+                          return (
+                            <li key={index}>
+                              <a href={link}>{link}</a>
+                            </li>
+                          )
                         })}
                       </ul>
                     </>
